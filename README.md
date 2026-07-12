@@ -1,33 +1,47 @@
-# writing-loop
+# agentic-loop
 
-a prompt that makes the model run a full writing loop instead of just spitting out a draft.
+your prompt one-shots. an agent loops. that's the entire difference.
 
-most AI writing is bad because people ask for the article too early. they skip angle selection, hook testing, the critique pass, and the rewrite. this prompt forces all of it.
+this repo is one prompt that turns a normal request into an agentic loop — no framework, no orchestration layer, just a prompt shaped like a loop.
 
-**the loop:**
+## the anatomy
+
+every agentic loop prompt has six parts:
+
+1. **role** — a job, not a persona ("you are my writing loop")
+2. **state** — the variables the loop runs on (topic, audience, style, goal)
+3. **ordered steps with a gate** — "do not produce the final output immediately" blocks the one-shot reflex
+4. **a critic with a named checklist** — vague critics rubber-stamp; named failure modes catch things
+5. **a rewrite rule** — every flagged issue gets fixed or defended, no silent skips
+6. **a stopping condition + handoff** — end with the deliverable, the weakest remaining part, and what to test next run
+
+## the prompts
+
+- [GENERATOR.md](GENERATOR.md) — a meta-prompt that builds a new loop for any job you describe. the generator is itself a loop.
+- [`.claude/skills/loopgen`](.claude/skills/loopgen/SKILL.md) — the generator packaged as a Claude Code skill. type `/loopgen <your task>` and it runs the five steps and hands back a ready-to-paste loop.
+
+swap the steps and the critic's checklist to loop anything — code review, landing page copy, cold emails. or let the generator do the swapping.
+
+## the skill
+
+if you use Claude Code, you don't have to paste the meta-prompt by hand:
 
 ```
-angle → hook → draft → critique → rewrite → image ideas → next test
+/loopgen reviewing pull requests on a typescript codebase
 ```
 
-## the prompt
-
-see [PROMPT.md](PROMPT.md) for the copy-paste version.
+it derives the domain-specific failure modes, designs the divergence step, builds the six-part loop, stress-tests it, and delivers the loop plus an example fill plus the one failure mode most likely to slip through.
 
 ## how to use it
 
-1. fill in the four brackets: topic, audience, style, goal
+1. fill in the four state variables
 2. paste into your model of choice
-3. do not skip to the final draft — the angle scores and the critique pass are where the actual value is
-4. the "editor mode" step will attack the model's own draft. it is usually right.
+3. don't skip to the final output — the option-scoring and the critique pass are where the value is
+4. the critic will attack the model's own work. it is usually right.
 
 ## why this works
 
-when you ask for "an article about X," the model averages over every article about X it has ever seen. that average is the generic voice you keep getting.
-
-when you force it to generate competing angles, score them, draft, then critique its own work against specific failure modes (weak opening, missing proof, sounds-like-AI), you get a second pass that fixes exactly the things a human editor would flag.
-
-the rewrite is consistently better than the first draft. not because the model got smarter — because you finally asked for the whole job.
+a one-shot prompt gives you the average of everything the model has seen on that topic. the loop forces divergence (multiple options), judgment (scoring), and revision (critique → rewrite) — the three things a competent human does instinctively and a one-shot prompt skips entirely.
 
 ## built by
 
