@@ -28,6 +28,20 @@ The full rationale and benchmarks live in
 [references/sourcing-rule.md](references/sourcing-rule.md). This file is the
 procedure for applying it to one real item.
 
+## Setup — one-time (required for the comp lookup)
+
+The comp lookup in `scripts/flip_comp.py` calls the **SerpApi** eBay engine,
+which needs a key. Get one free at [serpapi.com](https://serpapi.com/), then
+make it available one of two ways:
+
+- **Env var:** `export SERPAPI_KEY=your_key_here` (add to your shell profile to
+  persist), or
+- **Key file:** save the key to a file and point `SERPAPI_KEY_FILE` at it.
+
+Without a key the script exits with a clear error and the flip-check falls back
+to manual comps. The key is read from your environment at runtime — it is never
+stored in this repo.
+
 ## Step 1 — Get the item
 
 You need, at minimum:

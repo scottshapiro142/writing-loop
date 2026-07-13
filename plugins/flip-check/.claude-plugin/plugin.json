@@ -1,7 +1,7 @@
 {
   "name": "flip-check",
   "description": "Decide whether to buy a specific secondhand item to resell (eBay, Mercari, Depop, Poshmark). Runs the sourcing gates — trustworthy sold comp, margin, dollar-profit floor, sell-through velocity, condition/authenticity — and returns a clear BUY or WALK with the max price to pay. Ships an eBay comps helper script (SerpApi).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Scott Shapiro",
     "url": "https://shiporskip.io"
