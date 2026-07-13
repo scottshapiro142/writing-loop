@@ -6,6 +6,12 @@
     "name": "Scott Shapiro",
     "url": "https://x.com/ScottShapiroUXD"
   },
-  "homepage": "https://github.com/scottshapiro142/writing-loop",
-  "keywords": ["prompt", "agentic", "loop", "generator", "meta-prompt"]
+  "homepage": "https://github.com/scottshapiro142/shiporskip-plugins",
+  "keywords": [
+    "prompt",
+    "agentic",
+    "loop",
+    "generator",
+    "meta-prompt"
+  ]
 }

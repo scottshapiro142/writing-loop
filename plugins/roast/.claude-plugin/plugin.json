@@ -6,6 +6,12 @@
     "name": "Scott Shapiro",
     "url": "https://shiporskip.io"
   },
-  "homepage": "https://github.com/scottshapiro142/writing-loop",
-  "keywords": ["adversarial", "critique", "validation", "decision", "stress-test"]
+  "homepage": "https://github.com/scottshapiro142/shiporskip-plugins",
+  "keywords": [
+    "adversarial",
+    "critique",
+    "validation",
+    "decision",
+    "stress-test"
+  ]
 }

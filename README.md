@@ -37,10 +37,10 @@ it derives the domain-specific failure modes, designs the divergence step, build
 this repo is also the **shiporskip** Claude Code plugin marketplace — a single home for the tools i ship. add it once:
 
 ```
-/plugin marketplace add scottshapiro142/writing-loop
+/plugin marketplace add scottshapiro142/shiporskip-plugins
 ```
 
-(you add the *repo* `writing-loop`, but install from the *marketplace* named `shiporskip`.) then install any of the tools:
+(you add the *repo* `shiporskip-plugins`, and install from the *marketplace* named `shiporskip`.) then install any of the tools:
 
 | tool | what it does | install |
 |------|--------------|---------|
