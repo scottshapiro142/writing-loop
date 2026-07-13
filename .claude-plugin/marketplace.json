@@ -9,6 +9,16 @@
       "name": "loopgen",
       "source": "./plugins/loopgen",
       "description": "Turn any task description into a ready-to-paste six-part agentic loop prompt. /loopgen <your task>."
+    },
+    {
+      "name": "roast",
+      "source": "./plugins/roast",
+      "description": "Convene an adversarial council to pressure-test an idea before you commit — five rival personas plus a Judge that returns GREEN LIGHT / RESHAPE / KILL and the cheapest 48-hour test."
+    },
+    {
+      "name": "flip-check",
+      "source": "./plugins/flip-check",
+      "description": "Should you buy this secondhand item to resell? Runs the sourcing gates and returns BUY or WALK with a max price. Includes an eBay comps script."
     }
   ]
 }

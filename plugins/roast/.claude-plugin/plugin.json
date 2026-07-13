@@ -1,0 +1,11 @@
+{
+  "name": "roast",
+  "description": "Convene an adversarial council to pressure-test an idea, plan, or feature before you commit. Five rival personas (Contrarian, Expansionist, First Principles, Deep Researcher, Buyer) in parallel, then a Judge returns GREEN LIGHT / RESHAPE / KILL plus the single cheapest 48-hour test to validate it.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Scott Shapiro",
+    "url": "https://shiporskip.io"
+  },
+  "homepage": "https://github.com/scottshapiro142/writing-loop",
+  "keywords": ["adversarial", "critique", "validation", "decision", "stress-test"]
+}

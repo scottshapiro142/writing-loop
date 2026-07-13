@@ -32,22 +32,29 @@ if you use Claude Code, you don't have to paste the meta-prompt by hand:
 
 it derives the domain-specific failure modes, designs the divergence step, builds the six-part loop, stress-tests it, and delivers the loop plus an example fill plus the one failure mode most likely to slip through.
 
-## install the skill
+## the shiporskip marketplace
 
-two ways, depending on what you want:
-
-**clone and use it here** — the skill lives at `.claude/skills/loopgen/`, so if you clone this repo and run Claude Code inside it, `/loopgen` is available automatically. no install step.
-
-**install it into any project** — this repo is also the **shiporskip** Claude Code plugin marketplace. from any project:
+this repo is also the **shiporskip** Claude Code plugin marketplace — a single home for the tools i ship. add it once:
 
 ```
 /plugin marketplace add scottshapiro142/writing-loop
-/plugin install loopgen@shiporskip
 ```
 
-now `/loopgen` works everywhere, not just in this repo. (you add the *repo* `writing-loop`, but install from the *marketplace* named `shiporskip` — more tools will land here.)
+(you add the *repo* `writing-loop`, but install from the *marketplace* named `shiporskip`.) then install any of the tools:
 
-> maintainer note: the skill exists twice on purpose — `.claude/skills/loopgen/SKILL.md` (clone-and-run) and `plugins/loopgen/skills/loopgen/SKILL.md` (the installable plugin). keep the two copies identical when editing.
+| tool | what it does | install |
+|------|--------------|---------|
+| **loopgen** | turn a task description into a ready-to-paste agentic loop | `/plugin install loopgen@shiporskip` |
+| **roast** | adversarial council that stress-tests an idea → GREEN LIGHT / RESHAPE / KILL + the cheapest 48-hour test | `/plugin install roast@shiporskip` |
+| **flip-check** | should you buy this secondhand item to resell? BUY / WALK + max price (ships an eBay comps script) | `/plugin install flip-check@shiporskip` |
+
+once installed, each tool's slash command (`/loopgen`, `/roast`, `/flip-check`) works in every project.
+
+**or clone and use loopgen here** — it also lives at `.claude/skills/loopgen/`, so running Claude Code inside a clone of this repo exposes `/loopgen` with no install step.
+
+> maintainer notes:
+> - each tool is a plugin under `plugins/<name>/`. edit the copy there, then bump `version` in its `plugins/<name>/.claude-plugin/plugin.json` so installed users pull the change on `/plugin marketplace update`.
+> - `loopgen` also has a project-skill copy at `.claude/skills/loopgen/` (for clone-and-run). keep it identical to `plugins/loopgen/skills/loopgen/SKILL.md` when editing.
 
 ## how to use it
 
