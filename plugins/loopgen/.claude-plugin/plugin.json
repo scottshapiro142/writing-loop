@@ -1,0 +1,11 @@
+{
+  "name": "loopgen",
+  "description": "Generate a complete agentic loop prompt from a task description. Runs the five-step loop-builder: understand the job, derive domain-specific failure modes, design the divergence step, build the six-part loop, stress-test, deliver.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Scott Shapiro",
+    "url": "https://x.com/ScottShapiroUXD"
+  },
+  "homepage": "https://github.com/scottshapiro142/writing-loop",
+  "keywords": ["prompt", "agentic", "loop", "generator", "meta-prompt"]
+}

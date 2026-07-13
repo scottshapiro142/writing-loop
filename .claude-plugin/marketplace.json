@@ -1,0 +1,14 @@
+{
+  "name": "writing-loop",
+  "owner": {
+    "name": "Scott Shapiro",
+    "url": "https://x.com/ScottShapiroUXD"
+  },
+  "plugins": [
+    {
+      "name": "loopgen",
+      "source": "./plugins/loopgen",
+      "description": "Turn any task description into a ready-to-paste six-part agentic loop prompt. /loopgen <your task>."
+    }
+  ]
+}

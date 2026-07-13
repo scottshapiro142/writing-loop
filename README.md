@@ -32,6 +32,23 @@ if you use Claude Code, you don't have to paste the meta-prompt by hand:
 
 it derives the domain-specific failure modes, designs the divergence step, builds the six-part loop, stress-tests it, and delivers the loop plus an example fill plus the one failure mode most likely to slip through.
 
+## install the skill
+
+two ways, depending on what you want:
+
+**clone and use it here** — the skill lives at `.claude/skills/loopgen/`, so if you clone this repo and run Claude Code inside it, `/loopgen` is available automatically. no install step.
+
+**install it into any project** — this repo is also a Claude Code plugin marketplace. from any project:
+
+```
+/plugin marketplace add scottshapiro142/writing-loop
+/plugin install loopgen@writing-loop
+```
+
+now `/loopgen` works everywhere, not just in this repo.
+
+> maintainer note: the skill exists twice on purpose — `.claude/skills/loopgen/SKILL.md` (clone-and-run) and `plugins/loopgen/skills/loopgen/SKILL.md` (the installable plugin). keep the two copies identical when editing.
+
 ## how to use it
 
 1. fill in the four state variables
