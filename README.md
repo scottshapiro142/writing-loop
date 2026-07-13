@@ -38,14 +38,14 @@ two ways, depending on what you want:
 
 **clone and use it here** — the skill lives at `.claude/skills/loopgen/`, so if you clone this repo and run Claude Code inside it, `/loopgen` is available automatically. no install step.
 
-**install it into any project** — this repo is also a Claude Code plugin marketplace. from any project:
+**install it into any project** — this repo is also the **shiporskip** Claude Code plugin marketplace. from any project:
 
 ```
 /plugin marketplace add scottshapiro142/writing-loop
-/plugin install loopgen@writing-loop
+/plugin install loopgen@shiporskip
 ```
 
-now `/loopgen` works everywhere, not just in this repo.
+now `/loopgen` works everywhere, not just in this repo. (you add the *repo* `writing-loop`, but install from the *marketplace* named `shiporskip` — more tools will land here.)
 
 > maintainer note: the skill exists twice on purpose — `.claude/skills/loopgen/SKILL.md` (clone-and-run) and `plugins/loopgen/skills/loopgen/SKILL.md` (the installable plugin). keep the two copies identical when editing.
 
